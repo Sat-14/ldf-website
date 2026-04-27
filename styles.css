@@ -564,19 +564,42 @@ nav.scrolled {
     background: var(--accent-red);
 }
 
+.drop-image-gallery {
+    flex: 1.2;
+    display: flex;
+    gap: 20px;
+}
+
 .drop-image {
     flex: 1;
     position: relative;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    background: #000;
+}
+
+.image-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: var(--accent-red);
+    padding: 4px 8px;
+    font-size: 0.7rem;
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    border: 1px solid var(--accent-red);
+    z-index: 10;
 }
 
 .drop-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
     max-height: 550px;
-    object-fit: cover;
+    object-fit: contain; /* Changed from cover to contain so both front logo and back fit nicely */
     display: block;
     transition: var(--transition-smooth);
 }
@@ -790,6 +813,11 @@ footer {
     .commander-row, .commander-row.reverse, .exclusive-drop {
         flex-direction: column;
         text-align: center;
+    }
+
+    .drop-image-gallery {
+        flex-direction: column;
+        width: 100%;
     }
 
     .commander-img-container, .drop-image {

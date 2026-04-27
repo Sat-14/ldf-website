@@ -433,6 +433,12 @@ nav.scrolled {
     margin-top: 40px;
 }
 
+.founder-img-gallery {
+    display: flex;
+    gap: 30px;
+    flex: 1;
+}
+
 .high-command {
     display: flex;
     flex-direction: column;
@@ -921,7 +927,7 @@ footer {
         text-align: center;
     }
 
-    .drop-image-gallery {
+    .drop-image-gallery, .founder-img-gallery {
         flex-direction: column;
         width: 100%;
     }
